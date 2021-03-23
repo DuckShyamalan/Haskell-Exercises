@@ -1,0 +1,7 @@
+data Expr = Var String | Lam String Expr | App Expr Expr deriving (Eq, Show, Read)
+W::= cl(\x -> e, E)
+F::= V[-] | [-]e
+K::= [] | F::K
+E::= Empty | E[x:=W]
+
+

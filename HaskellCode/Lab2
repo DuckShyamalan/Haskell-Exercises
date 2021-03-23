@@ -1,0 +1,5 @@
+halve :: [a] -> ([a],[a])
+halve (x:xs) | length xs `mod` 2 == 1   = error "Not an even list"
+             | length xs == 0           = show xs
+	     | otherwise                = (take (length xs `div` 2), drop (length xs `div` 2))
+	     
